@@ -23,12 +23,19 @@ class MyViewer extends Component {
                 minZoomRatio: 0.1,
                 maxZoomRatio: 3,
                 title: false,
+                initialViewIndex: this.props.index,
                 toolbar: {
                     prev: true,
+                    zoomIn: {
+                        show: true,
+                        size: 'large'
+                    },
+                    zoomOut: {
+                        show: true,
+                        size: 'large'
+                    },
                     next: true,
-                    zoomIn: true,
-                    zoomOut: true,
-                    reset: true
+                    // reset: true
                 },
                 // toolbar: false,
                 // navbar: false,
@@ -44,7 +51,7 @@ class MyViewer extends Component {
         return (
             <div >
                 <div style={{ width: 800, height: 600 }}>
-                    <ul id="images" class="imagesList" style={{ display: 'none' }}>
+                    <ul id="images" className="imagesList" style={{ display: 'none' }}>
                         {listImages}
                     </ul>
                 </div>

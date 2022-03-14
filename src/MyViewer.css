@@ -16,3 +16,7 @@
     width: 60px;
     height: 100px;
 }
+
+.viewer-toolbar ul li {
+    border-radius: 20%;
+}

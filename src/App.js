@@ -15,6 +15,7 @@ export default function App() {
     const [images, setImages] = React.useState(imagesList);
     const [key, setKey] = React.useState(1);
     const [visible, setVisible] = React.useState(true);
+    const [indexImage, setIndexImage] = React.useState(0);
     const onDrop = useCallback(acceptedFiles => {
         const url = `https://imagepreview35bff39bf2604b289e8053bc3ef18135173158-dev.s3.amazonaws.com/${uuidv4()}.jpg`
         const options = {
@@ -29,7 +30,8 @@ export default function App() {
             .then(function () {
                 imagesList.push(url)
                 setImages(imagesList)
-                // setKey(Math.random())
+                setIndexImage(imagesList.length-1)
+                setKey(Math.random())
             })
             .finally(function () {
                 document.querySelector('#fileDrop p').innerHTML = messageSelectFile;
@@ -53,6 +55,7 @@ export default function App() {
                 visible={visible}
                 images={images}
                 key={key}
+                index={indexImage}
             />
         </div>
     )
