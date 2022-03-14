@@ -25,8 +25,10 @@ class MyViewer extends Component {
                 title: false,
                 initialViewIndex: this.props.index,
                 toolbar: {
-                    prev: true,
-                    next: true,
+                    prev: {
+                        show: true,
+                        size: 'large'
+                    },
                     zoomIn: {
                         show: true,
                         size: 'medium'
@@ -34,6 +36,10 @@ class MyViewer extends Component {
                     zoomOut: {
                         show: true,
                         size: 'medium'
+                    },
+                    next: {
+                        show: true,
+                        size: 'large'
                     },
                 },
                 // toolbar: false,
