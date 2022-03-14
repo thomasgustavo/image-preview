@@ -26,15 +26,15 @@ class MyViewer extends Component {
                 initialViewIndex: this.props.index,
                 toolbar: {
                     prev: true,
+                    next: true,
                     zoomIn: {
                         show: true,
-                        size: 'large'
+                        size: 'medium'
                     },
                     zoomOut: {
                         show: true,
-                        size: 'large'
+                        size: 'medium'
                     },
-                    next: true,
                 },
                 // toolbar: false,
                 // navbar: false,
