@@ -35,7 +35,6 @@ class MyViewer extends Component {
                         size: 'large'
                     },
                     next: true,
-                    // reset: true
                 },
                 // toolbar: false,
                 // navbar: false,
